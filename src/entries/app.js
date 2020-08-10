@@ -11,6 +11,7 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from '../pages/components/header.js';
+import NotFound from '../pages/components/not-found';
 // function logger({ getState, dispatch}) {
 //   return (next) => {
 //     return (action) => {
@@ -54,6 +55,7 @@ render(
         <Header />
         <Route exact path="/" component={Home} />
         <Route exact path="/videos" component={Videos} />
+        <Route component={NotFound}/>
       </Fragment>
     </Provider>
   </BrowserRouter>
